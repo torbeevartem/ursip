@@ -38,6 +38,20 @@ class GenerateTest {
     }
 
     @Test
+    void generateNum_list_contains_10() {
+        List<Integer> list = Arrays.asList(11);
+        String result = Generate.generateNum(list);
+        assertEquals("010", result);
+    }
+
+    @Test
+    void generateNum_list_contains_100() {
+        List<Integer> list = Arrays.asList(101);
+        String result = Generate.generateNum(list);
+        assertEquals("100", result);
+    }
+
+    @Test
     void generateNum_list_contains_0() {
         List<Integer> list = Arrays.asList(0);
         String result = Generate.generateNum(list);
